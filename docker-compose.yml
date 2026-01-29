@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tests:
+    build: .
+    volumes:
+      - .:/app
+      - ./reports:/app/reports
+    environment:
+      - YANDEX_DISK_TOKEN=${YANDEX_DISK_TOKEN}
+
+    command: pytest -v

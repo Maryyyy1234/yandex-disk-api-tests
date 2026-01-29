@@ -1,0 +1,38 @@
+# Игнорируем при сборке Docker образа
+
+# Виртуальное окружение
+venv/
+ENV/
+env/
+.venv
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Отчёты (будут созданы при запуске)
+reports/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Локальные env файлы (если есть)
+.env.local
+.env.*.local
