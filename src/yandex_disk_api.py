@@ -191,13 +191,11 @@ class YandexDiskAPI:
 
         response = self._make_request("DELETE", "/resources", params=params, suppress_404_logging=suppress_404_logging)
 
-       
         if permanently:
             max_wait_time = 5.0  
             check_interval = 0.5  
             elapsed_time = 0.0
             
-  
             while elapsed_time < max_wait_time:
                 try:
 
@@ -206,7 +204,6 @@ class YandexDiskAPI:
                     elapsed_time += check_interval
                 except RequestException:
     
-                    logger.debug(f"   Ресурс удалён (проверка заняла {elapsed_time:.1f}с)")
                     break
 
         if response.status_code == 204:
